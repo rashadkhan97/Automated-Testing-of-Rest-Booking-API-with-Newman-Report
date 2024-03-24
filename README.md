@@ -168,61 +168,64 @@ This project demonstrates API testing using Postman, providing a collection of t
 ### Request Method: PUT
 ### Pre-request Script:
 ```console 
-    var firstName = pm.variables.replaceIn("{{$randomFirstName}}")
-    pm.environment.set("firstName", firstName)
-    console.log("First Name Value "+firstName)
-    
-    var lastName = pm.variables.replaceIn("{{$randomLastName}}")
-    pm.environment.set("lastName", lastName)
-    console.log("Last Name Value "+lastName)
-    
-    var totalPrice = pm.variables.replaceIn("{{$randomInt}}")
-    pm.environment.set("totalPrice", totalPrice)
-    console.log(totalPrice)
-    
-    var depositPaid = pm.variables.replaceIn("{{$randomBoolean}}")
-    pm.environment.set("depositPaid", depositPaid)
-    console.log(depositPaid)
-    
-    //Date
-    const moment = require('moment')
-    const today = moment()
-    pm.environment.set("checkin", today.add(1,'d').format("YYYY-MM-DD"))
-    pm.environment.set("checkout",today.add(5,'d').format("YYYY-MM-DD") )
-    
-    var additionalNeeds = pm.variables.replaceIn("{{$randomNoun}}")
-    pm.environment.set("additionalNeeds", additionalNeeds)
+	//DYNAMIC CREATION LIST FOR ALL VARIABLES
+	//First Name
+	
+	var updated_firstname = pm.variables.replaceIn("{{$randomFirstName}}");
+	pm.environment.set("updated_firstname", updated_firstname)
+	
+	//Last Name
+	var updated_lastname = pm.variables.replaceIn("{{$randomLastName}}");
+	pm.environment.set("updated_lastname", updated_lastname); //calling enivorment to get lastname in enviroment
+	
+	
+	//totalprice
+	var updated_totalprice = pm.variables.replaceIn("{{$randomInt}}");
+	pm.environment.set("updated_totalprice", updated_totalprice)
+	
+	//depositpaid
+	var updated_depositpaid = pm.variables.replaceIn("{{$randomBoolean}}");
+	pm.environment.set("updated_depositpaid", updated_depositpaid)
+	
+	//calling moment library for Checkin & Check out
+	const moment = require("moment");       
+	// moment is a library for date and time
+	const today = moment();
+	//for checking
+	pm.environment.set("updated_checkin", today.add(1,'d').format("YYYY-MM-DD"));
+	pm.environment.set("updated_checkout", today.add(5, 'd').format("YYYY-MM-DD"));
+	
+	//additional needs 
+	var updated_additionalneeds = pm.variables.replaceIn("{{$randomProduct}}");
+	pm.environment.set("updated_additionalneeds", updated_additionalneeds)
 ```
   **Request Body:** 
  ```console 
   {
-	  "firstname" : "{{firstName}}",
-	  "lastname" : "{{lastName}}",
-	  "totalprice" : {{totalPrice}},
-	  "depositpaid" : {{depositPaid}},
-	  "bookingdates" : {
-    	  "checkin" : "{{checkin}}",
-    	  "checkout" : "{{checkout}}"
-	  },
-	  "additionalneeds" : "{{additionalNeeds}}"
-  }
+	"firstname" : "{{updated_firstname}}",
+	"lastname" : "{{updated_lastname}}",
+	"totalprice" : "{{updated_totalprice}}",
+	"depositpaid" : {{updated_depositpaid}},
+	"bookingdates" : {
+    	"checkin" : "{{updated_checkin}}",
+    	"checkout" : "{{updated_checkout}}"
+	},
+	"additionalneeds" : "{{updated_additionalneeds}}"
+}
 ```
   **Response Body:**
  ```console 
   {
-      "bookingid": 4334,
-      "booking": {
-          "firstname": "Joelle",
-          "lastname": "Krajcik",
-          "totalprice": 266,
-          "depositpaid": true,
-          "bookingdates": {
-              "checkin": "2024-03-15",
-              "checkout": "2024-03-20"
-          },
-          "additionalneeds": "monitor"
-      }
-  }
+    "firstname": "Justen",
+    "lastname": "Marvin",
+    "totalprice": 620,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": "2024-03-26",
+        "checkout": "2024-03-31"
+    },
+    "additionalneeds": "Bike"
+}
 ```
 
  ## _**5. Delete Booking Record**_
