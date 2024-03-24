@@ -245,21 +245,15 @@ newman run Rashadul_Islam_SQA_API_Testing.postman_collection.json -e Rashadul_Is
 ```
 
 ## Newman Report Summary:
-<p align="center">
-  <img src="https://github.com/rashadkhan97/Automated-Testing-of-Rest-Booking-API-with-Newman-Report/assets/76771109/6e8d4bc8-0ab6-4433-8b89-6959d938bf99" />
-</p>
+![image](https://github.com/rashadkhan97/Automated-Testing-of-Rest-Booking-API-with-Newman-Report/assets/76771109/65e61407-2871-4ff8-a4db-75b13410c380)
+![image](https://github.com/rashadkhan97/Automated-Testing-of-Rest-Booking-API-with-Newman-Report/assets/76771109/94a17809-c1f9-41fd-971d-3369e57d894a)
+![image](https://github.com/rashadkhan97/Automated-Testing-of-Rest-Booking-API-with-Newman-Report/assets/76771109/40a5417b-78cf-40e5-b62e-32812f4615cf)
+![image](https://github.com/rashadkhan97/Automated-Testing-of-Rest-Booking-API-with-Newman-Report/assets/76771109/49802988-8631-4832-8dc8-b4c1a3431909)
+![image](https://github.com/rashadkhan97/Automated-Testing-of-Rest-Booking-API-with-Newman-Report/assets/76771109/3045a1c7-db19-44da-bf32-33a9082abab4)
 
-<p align="center">
-  <img src="https://github.com/rashadkhan97/Automated-Testing-of-Rest-Booking-API-with-Newman-Report/assets/76771109/5788a048-68f3-4ddb-ae4b-f8c3e04b281c" />
-</p>
 
-<p align="center">
-  <img src="https://github.com/rashadkhan97/Automated-Testing-of-Rest-Booking-API-with-Newman-Report/assets/76771109/a3506b08-4e6a-41a2-bff1-d68172772c7b" />
-</p>
 
-<p align="center">
-  <img src="https://github.com/rashadkhan97/Automated-Testing-of-Rest-Booking-API-with-Newman-Report/assets/76771109/968e81e8-4976-4f0b-926d-15345e059864" />
-</p>
+
 
 
 
