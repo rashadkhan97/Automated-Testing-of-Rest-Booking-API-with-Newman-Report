@@ -237,11 +237,11 @@ This project demonstrates API testing using Postman, providing a collection of t
 ## Run Command:  
 - Run Command for Console: 
 ```console 
-newman run Ebrahim_Hossain_SQA.postman_collection.json -e Ebrahim_Hossain_SQA.postman_environment.json 
+newman run Rashadul_Islam_SQA_API_Testing.postman_collection.json -e Rashadul_Islam_SQA_API_Testing.postman_environment.json
 ```
 - Run Command for Report: 
 ```console 
-newman run Ebrahim_Hossain_SQA.postman_collection.json -e Ebrahim_Hossain_SQA.postman_environment.json -r cli,htmlextra
+newman run Rashadul_Islam_SQA_API_Testing.postman_collection.json -e Rashadul_Islam_SQA_API_Testing.postman_environment.json -r cli,htmlextra
 ```
 
 ## Newman Report Summary:
