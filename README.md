@@ -66,30 +66,36 @@ This project demonstrates API testing using Postman, providing a collection of t
 ### Request Method: POST
 ### Pre-request Script:
 ```console 
-    var firstName = pm.variables.replaceIn("{{$randomFirstName}}")
-    pm.environment.set("firstName", firstName)
-    console.log("First Name Value "+firstName)
-    
-    var lastName = pm.variables.replaceIn("{{$randomLastName}}")
-    pm.environment.set("lastName", lastName)
-    console.log("Last Name Value "+lastName)
-    
-    var totalPrice = pm.variables.replaceIn("{{$randomInt}}")
-    pm.environment.set("totalPrice", totalPrice)
-    console.log(totalPrice)
-    
-    var depositPaid = pm.variables.replaceIn("{{$randomBoolean}}")
-    pm.environment.set("depositPaid", depositPaid)
-    console.log(depositPaid)
-    
-    //Date
-    const moment = require('moment')
-    const today = moment()
-    pm.environment.set("checkin", today.add(1,'d').format("YYYY-MM-DD"))
-    pm.environment.set("checkout",today.add(5,'d').format("YYYY-MM-DD") )
-    
-    var additionalNeeds = pm.variables.replaceIn("{{$randomNoun}}")
-    pm.environment.set("additionalNeeds", additionalNeeds)
+	//DYNAMIC CREATION LIST FOR ALL VARIABLES
+	//First Name
+	var firstname = pm.variables.replaceIn("{{$randomFirstName}}");
+	pm.environment.set("firstname", firstname)
+	
+	//Last Name
+	var lastname = pm.variables.replaceIn("{{$randomLastName}}");
+	pm.environment.set("lastname", lastname); //calling enivorment to get lastname in enviroment
+	
+	
+	//totalprice
+	var totalprice = pm.variables.replaceIn("{{$randomInt}}");
+	pm.environment.set("totalprice", totalprice)
+	
+	//depositpaid
+	var depositpaid = pm.variables.replaceIn("{{$randomBoolean}}");
+	pm.environment.set("depositpaid", depositpaid)
+	
+	//calling moment library for Checkin & Check out
+	const moment = require("moment");       
+	// moment is a library for date and time
+	const today = moment();
+	//for checking
+	pm.environment.set("checkin", today.add(0,'d').format("YYYY-MM-DD"));
+	pm.environment.set("checkout", today.add(5, 'd').format("YYYY-MM-DD"));
+	
+	//additional needs 
+	var additionalneeds = pm.variables.replaceIn("{{$randomProduct}}");
+	pm.environment.set("additionalneeds", additionalneeds)
+	
 ```
   **Request Body:** 
  ```console 
