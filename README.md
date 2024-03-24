@@ -114,19 +114,19 @@ This project demonstrates API testing using Postman, providing a collection of t
   **Response Body:**
  ```console 
   {
-      "bookingid": 4334,
-      "booking": {
-          "firstname": "Joelle",
-          "lastname": "Krajcik",
-          "totalprice": 266,
-          "depositpaid": true,
-          "bookingdates": {
-              "checkin": "2024-03-15",
-              "checkout": "2024-03-20"
-          },
-          "additionalneeds": "monitor"
-      }
-  }
+    "bookingid": 1394,
+    "booking": {
+        "firstname": "Brianne",
+        "lastname": "Jacobson",
+        "totalprice": 605,
+        "depositpaid": false,
+        "bookingdates": {
+            "checkin": "2024-03-25",
+            "checkout": "2024-03-30"
+        },
+        "additionalneeds": "Pants"
+    }
+}
 ```
  ## _**2. Get Booking Details By ID**_
 ### Request URL: https://restful-booker.herokuapp.com/booking/bookingid
@@ -134,15 +134,15 @@ This project demonstrates API testing using Postman, providing a collection of t
 ### Response Body:
  ```console 
 {
-    "firstname": "D'angelo",
-    "lastname": "Feeney",
-    "totalprice": 757,
-    "depositpaid": true,
+    "firstname": "Brianne",
+    "lastname": "Jacobson",
+    "totalprice": 605,
+    "depositpaid": false,
     "bookingdates": {
-        "checkin": "2024-03-15",
-        "checkout": "2024-03-20"
+        "checkin": "2024-03-25",
+        "checkout": "2024-03-30"
     },
-    "additionalneeds": "hard drive"
+    "additionalneeds": "Pants"
 }
 ```
 ## _**3. Create A Token For Authentication.**_
@@ -159,7 +159,7 @@ This project demonstrates API testing using Postman, providing a collection of t
   **Response Body:**
  ```console 
 {
-    "token": "06eb798bf6f2caa"
+    "token": "0d1b2ff4d291883"
 }
 ```
 
